@@ -18,8 +18,8 @@ void USART1_echo(char *input )
 {
 	char *p;
 	char expected_response[]="L1 en";
-	char valid_response[]="received\r\n";
-	char invalid_response[]="Command not identified\r\n";
+	char valid_response[]="Received\r\n";
+	char invalid_response[]="Cannot identify command\r\n";
 	if (  (strcmp(input,expected_response))==0 )
 	{
 		p= valid_response;
