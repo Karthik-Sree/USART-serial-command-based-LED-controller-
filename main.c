@@ -63,8 +63,7 @@ void main(void)
 {
 	IUSART1_Init();
    RCC->AHB1ENR |= ( 1 << 0 ); // Enable AHB clock for GPIOA
-   RCC->APB2ENR |= ( 1 << 14 ); // Enable USART1 peripheral 
-   GPIOA->PUPDR &= ~(3  << ( 2 * 2 );
+   GPIOA->PUPDR &= ~(3  << ( 2 * 2 ); // no Push up or Pull down
    GPIOA->MODER &= ~( 3 << (2  * 2)); // PA2 as LED
    GPIOA->MODER |= ( 1 << ( 2 * 2)); // mode is configured as output
    USART1->CR1 |= USART_CR1_RXNEIE; // enable Receive interrupt for USART1
